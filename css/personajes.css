@@ -1,0 +1,151 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo para el body */
+body {
+    background: url('https://games.mxdwn.com/wp-content/uploads/2017/01/52798655-bloodborne-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+    border-bottom: 3px solid #c0392b; /* Rojo sangre */
+    position: relative;
+    z-index: 10;
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 24px;
+    color: #c0392b; /* Rojo sangre */
+    font-family: 'Garamond', serif;
+    text-transform: uppercase;
+}
+
+/* Contenedor de personajes */
+.personajes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+/* Estilos de las tarjetas de personajes */
+.personaje-card {
+    background: rgba(20, 20, 20, 0.8);
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    height: 380px;
+    box-shadow: 0 0 15px rgba(192, 57, 43, 0.7);
+    transform: scale(0.7) rotate(20deg); /* Empieza con un ángulo */
+    opacity: 0;
+    animation: fadeInWithRotation 1s forwards ease-out; /* Animación con rotación */
+}
+
+.personaje-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(192, 57, 43, 0.8);
+}
+
+.personaje-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.personaje-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #e74c3c;
+}
+
+.personaje-card p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+
+@keyframes fadeInWithRotation {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) rotate(20deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg); /* Termina sin rotación y con escala normal */
+    }
+}
+
+
+
+
+/* Estilo para el botón Volver al Inicio */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(192, 57, 43, 0.8); /* Rojo oscuro */
+    color: white;
+    font-size: 20px;
+    padding: 15px 20px;
+    border-radius: 50%; /* Forma redonda */
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(192, 57, 43, 0.7);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 999; /* Asegura que el botón esté encima de otros elementos */
+}
+
+.back-to-top .arrow {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.back-to-top:hover {
+    background: rgba(192, 57, 43, 1); /* Rojo brillante */
+    transform: scale(1.1); /* Aumenta el tamaño del botón al pasar el ratón */
+    box-shadow: 0 0 25px rgba(192, 57, 43, 0.9); /* Efecto de sombra más pronunciada */
+}
+
+.back-to-top:active {
+    transform: scale(0.95); /* Reduce el tamaño al hacer clic */
+}
+
+/* Animación de la flecha */
+@keyframes arrowBounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Flecha sube un poco */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.back-to-top .arrow {
+    animation: arrowBounce 1s infinite; /* Hace que la flecha "salte" */
+}
