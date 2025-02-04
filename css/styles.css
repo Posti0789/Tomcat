@@ -1,0 +1,247 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #1a1a1a; /* Negro gótico */
+    border-bottom: 3px solid #c0392b; /* Detalle rojo sangre */
+    position: fixed; /* Fijamos el header en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Aseguramos que el header esté por encima del contenido */
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 24px;
+    color: #c0392b; /* Rojo sangre */
+    font-family: 'Garamond', serif;
+    text-transform: uppercase;
+}
+
+/* Icono de menú (hamburguesa) */
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 22px;
+    justify-content: space-between;
+}
+
+.bar {
+    background-color: #fff;
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* Menú */
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(30, 30, 30, 0.95);
+    border: 2px solid #c0392b;
+    border-radius: 5px;
+    width: 200px;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.menu ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Garamond', serif;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #e74c3c; /* Rojo más brillante */
+}
+
+/* Clases activas */
+.menu-active {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Logo con imagen */
+.logo img {
+    height: 100px; /* Ajusta el tamaño según tu imagen */
+    width: auto;
+    object-fit: contain; /* Asegura que la imagen se vea bien */
+}
+
+/* Fondo del body con la imagen de Bloodborne */
+body {
+    background: url('https://games.mxdwn.com/wp-content/uploads/2017/01/52798655-bloodborne-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Aseguramos que todo se coloque de forma vertical */
+}
+
+/* Contenedor principal */
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column; /* Coloca todo en columna */
+    margin-top: 100px; /* Da espacio para el header fijo */
+}
+
+/* Caja principal */
+.box {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 30px;
+    border: 3px solid #c0392b;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(192, 57, 43, 0.7);
+    max-width: 900px;
+    z-index: 2;
+}
+
+/* Título */
+.box h2 {
+    color: #e74c3c;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* 💀 GRID: Organiza las imágenes en 3 columnas */
+.options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Cada opción (imagen con texto) */
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s;
+}
+
+/* Imágenes con tamaño uniforme */
+.option img {
+    width: 100%;
+    height: 200px; /* Un tamaño uniforme para todas las imágenes */
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #c0392b;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Texto debajo de la imagen */
+.option span {
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Garamond', serif;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Efecto al pasar el ratón */
+.option:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(192, 57, 43, 0.8);
+}
+
+/* 📱 Responsividad: en móviles (menos de 768px) 2 columnas */
+@media (max-width: 768px) {
+    .options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 📱 En pantallas pequeñas (menos de 500px), 1 columna */
+@media (max-width: 500px) {
+    .options {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/* Rastro de sangre global */
+.rastro-sangre {
+    position: absolute;
+    pointer-events: none;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(192, 57, 43, 1); /* Rojo sangre */
+    border-radius: 50%;
+    transform: scale(0);
+    animation: bloodTrail 0.5s ease-out infinite;
+    opacity: 0;
+}
+
+/* Animación del rastro de sangre */
+@keyframes bloodTrail {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(10px, 10px) scale(0.8);
+        opacity: 0;
+    }
+}
+
+
+/* 📱 Responsividad: en móviles (menos de 768px) 2 columnas */
+@media (max-width: 768px) {
+    .options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 📱 En pantallas pequeñas (menos de 500px), 1 columna */
+@media (max-width: 500px) {
+    .options {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
