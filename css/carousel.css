@@ -1,3 +1,4 @@
+/* Estilos generales */
 * {
     margin: 0;
     padding: 0;
@@ -9,38 +10,53 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: url('https://files.oaiusercontent.com/file-F8imJ45sc833u4v86T58an?se=2025-02-04T19%3A10%3A32Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D9cf19105-f507-45ea-bd53-08a9e46de5dd.webp&sig=zPhPlJHbsYKvqEjO0tllVd1m3BPrba7ljMeYCzvEBN4%3D') no-repeat center center/cover;
+    background: url('https://games.mxdwn.com/wp-content/uploads/2017/01/52798655-bloodborne-wallpaper.jpg') no-repeat center center/cover;
     font-family: 'Old London', serif;
     overflow: hidden;
 }
 
-/* Contenedor */
+/* Contenedor del carrusel */
 .carousel-container {
     position: relative;
-    width: 800px;
-    height: 400px;
+    width: 900px;
+    height: 500px;
     overflow: hidden;
-    border: 3px solid #c0392b;
-    box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.5);
+    border: 4px solid #c0392b;
+    box-shadow: 0px 10px 25px rgba(255, 0, 0, 0.5);
 }
 
 /* Carrusel */
 .carousel {
     display: flex;
     width: 100%;
-    transition: transform 0.5s ease-in-out;
+    height: 100%;
+    position: relative;
 }
 
+/* Slides */
 .slide {
     min-width: 100%;
-    position: relative;
+    height: 100%;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Activar la imagen */
+.slide.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Imágenes */
 .slide img {
     width: 100%;
-    height: auto;
-    filter: grayscale(30%) contrast(120%);
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%) contrast(110%);
 }
 
 /* Texto */
@@ -50,7 +66,7 @@ body {
     width: 100%;
     text-align: center;
     color: #c0392b;
-    font-size: 24px;
+    font-size: 26px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
     background: rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -61,12 +77,12 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.8);
     color: #c0392b;
     border: 2px solid #c0392b;
-    padding: 10px 15px;
+    padding: 15px 20px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 30px;
     border-radius: 50%;
     transition: background 0.3s, transform 0.3s;
 }
@@ -78,9 +94,138 @@ body {
 }
 
 .prev {
-    left: 10px;
+    left: 15px;
 }
 
 .next {
-    right: 10px;
+    right: 15px;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInEffect 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeInEffect {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* 🔥 Estilos para la lámpara de cazador */
+#easter-egg {
+    position: fixed;
+    bottom: 50px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+    background: url('data:image/jpeg;base64,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') no-repeat center;
+    background-size: contain;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#easter-egg:hover {
+    opacity: 1; /* Brilla cuando pasas el ratón */
+}
+
+/* 🔥 Mensaje secreto inicial oculto */
+#mensaje-secreto {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(10, 10, 10, 0.9);
+    color: #e74c3c;
+    font-size: 24px;
+    font-family: 'Garamond', serif;
+    padding: 20px 40px;
+    border: 3px solid #e74c3c;
+    box-shadow: 0 0 20px rgba(192, 57, 43, 0.8);
+    text-align: center;
+    display: none;
+    opacity: 0;
+}
+
+/* 🎭 Animación brutal */
+@keyframes fadeInMessage {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%) scale(0.8);
+        filter: blur(10px);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        filter: blur(0px);
+    }
+    70% {
+        text-shadow: 0 0 10px red;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 💀 Efecto de parpadeo sangriento */
+@keyframes bloodFlicker {
+    0% { text-shadow: 0 0 5px red; }
+    50% { text-shadow: 0 0 20px red; }
+    100% { text-shadow: 0 0 5px red; }
+}
+
+
+#ojo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    background: url('../img/ojo.png') no-repeat center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s linear;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+
+.btn-bloodborne {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-family: 'Garamond', serif;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(45deg, #800000, #4b0000);
+    border: 2px solid #c0392b;
+    box-shadow: 0 0 10px #c0392b;
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* AHORA ESTÁ A LA DERECHA */
+    transition: all 0.3s ease-in-out;
+    z-index: 1000; /* Para que esté siempre por encima */
+}
+
+.btn-bloodborne:hover {
+    background: linear-gradient(45deg, #a00000, #600000);
+    box-shadow: 0 0 20px #e74c3c;
+    transform: scale(1.1);
+}
+
+/* 🔪 Efecto de Gotas de Sangre al Pasar el Ratón */
+.btn-bloodborne::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sangreAnimacion 1s infinite;
+}
+
+@keyframes sangreAnimacion {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(10px); }
 }
