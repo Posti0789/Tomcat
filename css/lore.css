@@ -1,0 +1,80 @@
+/* Fuente gótica */
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+
+body {
+    background: url('https://games.mxdwn.com/wp-content/uploads/2017/01/52798655-bloodborne-wallpaper.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0d7c5;
+    font-family: 'Uncial Antiqua', serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* ENCABEZADO */
+.header {
+    background: rgba(20, 20, 20, 0.9);
+    padding: 20px;
+    border-bottom: 4px solid #8b0000;
+    text-align: center;
+}
+
+.title {
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #c0392b;
+    text-shadow: 4px 4px 8px black;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* CONTENEDOR DEL LORE */
+.lore-container {
+    padding: 50px 10%;
+}
+
+.lore-section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    margin: 20px 0;
+    border-left: 5px solid #8b0000;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(139, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.lore-section h2 {
+    color: #c0392b;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* BOTÓN DE REGRESO */
+.btn-bloodborne {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 12px 24px;
+    background: #8b0000;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 3px solid black;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-bloodborne:hover {
+    transform: scale(1.1);
+    background: #600000;
+    box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.7);
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
