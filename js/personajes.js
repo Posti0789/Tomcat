@@ -2,12 +2,12 @@
 const personajes = [
     {
         nombre: "Hunter",
-        imagen: "https://static.wikia.nocookie.net/p__/images/5/59/Bloodborne.jpeg/revision/latest?cb=20240922184003&path-prefix=protagonist",
+        imagen: "https://preview.redd.it/a-bloodborne-inspired-hunter-would-be-stellar-v0-5g1fnghij1qd1.jpeg?width=640&crop=smart&auto=webp&s=b4768d8f961bdf1239535f40f895d19502bedf26",
         descripcion: "El cazador es el protagonista del juego. Su misión es eliminar monstruos y descubrir los secretos oscuros de Yharnam."
     },
     {
         nombre: "Gehrman",
-        imagen: "https://static.wikia.nocookie.net/bloodborne/images/a/a0/Gehrman.jpg/revision/latest?cb=20241205172333&path-prefix=es",
+        imagen: "https://pm1.aminoapps.com/6479/6e7ec36ea5aceb0214bafa21d1d0e8ff09e4c025_00.jpg",
         descripcion: "Gehrman es el primer cazador y el maestro de la escuela de los cazadores. Con una historia trágica, él es una figura clave en el juego."
     },
     {
@@ -22,7 +22,7 @@ const personajes = [
     },
     {
         nombre: "Josefska",
-        imagen: "https://static.wikia.nocookie.net/vsbattles/images/d/d5/Imposter_iosefka.png/revision/latest?cb=20160828024535",
+        imagen: "https://static.wikia.nocookie.net/bloodborne/images/b/bc/Image-char01.jpg/revision/latest/scale-to-width-down/1200?cb=20150330182034",
         descripcion: "Josefska es una científica que juega un papel importante en el laboratorio en la ciudad, conocida por sus investigaciones controvertidas."
     },
     {
