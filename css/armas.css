@@ -1,0 +1,52 @@
+/* Fondo oscuro gótico */
+body {
+    background: url('https://games.mxdwn.com/wp-content/uploads/2017/01/52798655-bloodborne-wallpaper.jpg') no-repeat center center fixed;    background-size: cover;
+    font-family: 'Garamond', serif;
+    color: #e8e8e8;
+    text-align: center;
+}
+
+/* Contenedor de armas */
+.armas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tarjetas de arma */
+.arma {
+    background: rgba(30, 30, 30, 0.9);
+    border: 2px solid #c0392b;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.arma:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(192, 57, 43, 0.8);
+}
+
+/* Imágenes de armas */
+.arma img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #c0392b;
+}
+
+/* Botón de regreso */
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #c0392b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.3s;
+}
