@@ -22,7 +22,7 @@ const personajes = [
     },
     {
         nombre: "Josefska",
-        imagen: "https://static.wikia.nocookie.net/bloodborne/images/b/bc/Image-char01.jpg/revision/latest/scale-to-width-down/1200?cb=20150330182034",
+        imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7GiyiWHNu14S70fZ9Oya8T2Ck4gaxhLflRQ&s",
         descripcion: "Josefska es una científica que juega un papel importante en el laboratorio en la ciudad, conocida por sus investigaciones controvertidas."
     },
     {
