@@ -1,0 +1,54 @@
+body {
+    background: url('https://wallpapersmug.com/download/2560x1080/9d707e/video-game-bloodborne-art.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Garamond', serif;
+    color: #c0c0c0;
+    text-align: center;
+}
+
+.contacto-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    width: 50%;
+    margin: 50px auto;
+    border: 2px solid #c0392b;
+    border-radius: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+}
+
+.boton-enviar {
+    background: #c0392b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton-enviar:hover {
+    background: #e74c3c;
+}
+
+.boton-volver {
+    display: block;
+    margin: 20px auto;
+    text-decoration: none;
+    color: white;
+    background: #c0392b;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.boton-volver:hover {
+    background: #e74c3c;
+}
