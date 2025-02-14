@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         armasContainer.appendChild(armaElemento);
 
-        // Easter Egg Mejorado 
+         
         if (arma.nombre === "Rueda de Logarius") {
             armaElemento.addEventListener("click", () => activarEasterEgg());
         }
