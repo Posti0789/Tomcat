@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let konamiCode = [];
     const secretCode = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
 
-    // Detectar el código Konami
     document.addEventListener("keydown", function(event) {
         konamiCode.push(event.key);
         if (konamiCode.length > secretCode.length) konamiCode.shift();
